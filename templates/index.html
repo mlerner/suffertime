@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block body %}
+  <div class="span12" style="text-align:center">
+    <h1>You like having KOMs, huh?  
+      <br>
+      <small>Find nearby Strava segments within your reach, and seize internet glory.</small>
+    </h1> 
+  </div>
+
+  <div class="row-fluid" style="">
+    <div class="span12" style="text-align: center">
+      <br /><br /><br />
+
+<div class="result"></div>      
+<form id="input_form" method="POST" action="/" class="form-inline"><fieldset>
+        
+        <span style="color: #777">
+          <input class="sf" id="strava_id" name="strava_id" size="50" type="text" style="width: 300px" value="" spellcheck="false"> &nbsp; 
+        </span>
+        <button id="startButton" class="btn btn-primary" style="width: 170px; text-align: center" onclick="if ($('#strava_id').val() == '') return false;">Giddyup</button>
+        <br />
+        <div class="row-fluid">
+        <div class="span2"></div>
+        <div class="span8" style="text-align: center">
+        <p class="help-block"><br>To find your Strava ID, login and select "My Profile" from the drop-down menu in the upper right. Copy and paste your URL, which should look like this: <a href="" style="color: #72aecc" onclick="$('#rideurl').val($(this).html()); return false">http://app.strava.com/athletes/13408</a><p>
+        </div>
+        </div>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+      </fieldset></form>
+    </div>
+</div>
+
+
+
+{% endblock %}
